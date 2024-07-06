@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Botoes de Opcoes</title>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Escolha uma opção:</h2>
+        <div>
+            <button class="btn-primary" onclick="showOptions('cds')">CDs</button>
+            <div id="cdsOptions" class="options">
+                <button class="btn-options" onclick="pesquisar('cds')">Pesquisar</button>
+                <button class="btn-options" onclick="cadastrar('cds')">Cadastrar</button>
+            </div>
+        </div>
+        <div>
+            <button class="btn-primary" onclick="showOptions('dvds')">DVDs</button>
+            <div id="dvdsOptions" class="options">
+                <button class="btn-options" onclick="pesquisar('dvds')">Pesquisar DVDs</button>
+                <button class="btn-options" onclick="cadastrar('dvds')">Cadastrar DVDs</button>
+            </div>
+        </div>
+        <div>
+            <button class="btn-primary" onclick="showOptions('lps')">LPs</button>
+            <div id="lpsOptions" class="options">
+                <button class="btn-options" onclick="pesquisar('lps')">Pesquisar LPs</button>
+                <button class="btn-options" onclick="cadastrar('lps')">Cadastrar LPs</button>
+            </div>
+        </div>
+        <div>
+            <button class="btn-primary" onclick="showOptions('compacto')">Compacto</button>
+            <div id="compactoOptions" class="options">
+                <button class="btn-options" onclick="pesquisar('compacto')">Pesquisar Compactos</button>
+                <button class="btn-options" onclick="cadastrar('compacto')">Cadastrar Compactos</button>
+            </div>
+        </div>
+    </div>
+    <script src="acesso.js"></script>
+</body>
+</html>
+
+
+
