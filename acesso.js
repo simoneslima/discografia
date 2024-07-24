@@ -29,7 +29,7 @@ function cadastrar(type) {
             window.location.href = 'cadastro_lps.html'; // Redireciona para a página de cadastro de LPs
             break;
         case 'compacto':
-            window.location.href = 'cadastro_compactos.html'; // Redireciona para a página de cadastro de Compactos
+            window.location.href = 'formulariocompacto/cadastro/form_comp.html'; // Redireciona para a página de cadastro de Compactos
             break;
         default:
             alert('Opção inválida');
