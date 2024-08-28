@@ -7,10 +7,10 @@ function pesquisar(type) {
             window.location.href = 'formulariodvds/Pesquisa/form_pesquisa.html'; // Redireciona para a página de pesquisa de DVDs
             break;
         case 'lps':
-            window.location.href = 'pesquisar_lps.php'; // Redireciona para a página de pesquisa de LPs
+            window.location.href = 'formulariolps'; // Redireciona para a página de pesquisa de LPs
             break;
         case 'compacto':
-            window.location.href = 'pesquisar_compactos.php'; // Redireciona para a página de pesquisa de Compactos
+            window.location.href = 'formulariocompacto/pesquisar/form_pesquisa.html'; // Redireciona para a página de pesquisa de Compactos
             break;
         default:
             alert('Opção inválida');
@@ -26,7 +26,7 @@ function cadastrar(type) {
             window.location.href = 'formulariodvds/cadastro/formdvds.html'; // Redireciona para a página de cadastro de DVDs
             break;
         case 'lps':
-            window.location.href = 'cadastro_lps.html'; // Redireciona para a página de cadastro de LPs
+            window.location.href = 'formulariolps/cadastro/form_lps.html'; // Redireciona para a página de cadastro de LPs
             break;
         case 'compacto':
             window.location.href = 'formulariocompacto/cadastro/form_comp.html'; // Redireciona para a página de cadastro de Compactos

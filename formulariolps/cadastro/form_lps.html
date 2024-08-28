@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Cadastro de LPS</title>
+</head>
+<body>
+    <h1>Formulário de LPS</h1>
+    <form action="ligar.php" method="post">
+        <label for="nome">Artista:</label><br>
+        <input type="text" id="Artista" name="Artista" required><br><br>
+        <label for="nome">Nome do Disco:</label><br>
+        <input type="text" id="Disco" name="Disco" required><br><br>
+        <label for="nome">Tipo:</label><br>
+        <input type="text" id="Tipo" name="Tipo" required placeholder="Álbum/Live/Coletânea"><br><br>
+        <label for="nome">Quantidade de Faixas:</label><br>
+        <input type="number" id="Faixas" name="Faixas" required><br><br>
+        <label for="nome">Selo:</label><br>
+        <input type="text" id="Selo" name="Selo" required><br><br>
+        <label for="nome">Origem:</label><br>
+        <input type="text" id="Origem" name="Origem" required placeholder="Pais"><br><br>
+        <label for="nome">Ano da Prensagem:</label><br>
+        <input type="text" id="Prensagem" name="Prensagem" required><br><br>
+        <label for="nome">Quantidade de discos:</label><br>
+        <input type="text" id="Midias" name="Midias" required><br><br>
+        <label for="nome">Estado do Disco:</label><br>
+        <input type="text" id="Est_Disco" name="Est_Disco" required placeholder="Boa/Ruim"><br><br>
+        <label for="nome">Tipo da Capa:</label><br>
+        <input type="text" id="Capa_tipo" name="Capa_tipo" required placeholder="Gatefold/Simples"><br><br>
+        <label for="nome">Quantidade de Copias:</label><br>
+        <input type="number" id="Copias" name="Copias" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
