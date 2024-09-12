@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = "localhost:3306"; // Nome do host do banco de dados
     $usuario = "root"; // Nome de usuário do banco de dados
     $senha = ""; // Senha do banco de dados
-    $banco = "discografia"; // Nome do banco de dados
+    $banco = "catalogar"; // Nome do banco de dados
 
     // Cria a conexão
     $conn = new mysqli($host, $usuario, $senha, $banco);
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Pega os dados do formulário
     $artista = $_POST['Artista'];
     $nome_disco = $_POST['Nome_disco'];
-    $quantidade = $_POST['Quant'];
+    $quant = $_POST['Quant'];
     $faixas = $_POST['Faixas'];
     $tipo = $_POST['Tipo'];
     $quant_midia = $_POST['Quant_Midia'];
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Prepara e vincula
 $stmt = $conn->prepare("INSERT INTO cds (artista, nome_disco, Quant, faixas, tipo, quant_midia, ano_lancamento, ano_cd, pais) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssiiisiss", $artista, $nome_disco, $quantidade, $faixas, $tipo, $quant_midia, $ano_lancamento, $ano_cd, $pais);
+$stmt->bind_param("ssississs", $artista, $nome_disco, $quant, $faixas, $tipo, $quant_midia, $ano_lancamento, $ano_cd, $pais);
 
 
     // Executa

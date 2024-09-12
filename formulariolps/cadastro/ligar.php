@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = "localhost:3306"; // Nome do host do banco de dados
     $usuario = "root"; // Nome de usuário do banco de dados
     $senha = ""; // Senha do banco de dados
-    $banco = "discografia"; // Nome do banco de dados
+    $banco = "catalogar"; // Nome do banco de dados
 
     // Cria a conexão
     $conectar = new mysqli($host, $usuario, $senha, $banco);
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Copias = $_POST['Copias'];
 
     // Prepara e vincula
-    $ligar = $conectar->prepare("INSERT INTO vinil (Artista, Disco, Tipo, Faixas, Selo, Origem, Prensagem, Midias, Est_Disco, Capa_tipo, Copias) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $ligar = $conectar->prepare("INSERT INTO lps (Artista, Disco, Tipo, Faixas, Selo, Origem, Prensagem, Midias, Est_Disco, Capa_tipo, Copias) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $ligar->bind_param("sssissssssi", $Artista, $Disco, $Tipo, $Faixas, $Selo, $Origem, $Prensagem, $Midias, $Est_Disco, $Capa_tipo, $Copias);
 
     // Executa

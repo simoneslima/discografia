@@ -2,7 +2,7 @@
 $host = "localhost"; // Nome do host do banco de dados
 $usuario = "root"; // Nome de usuário do banco de dados
 $senha = ""; // Senha do banco de dados
-$banco = "discografia"; // Nome do banco de dados
+$banco = "catalogar"; // Nome do banco de dados
 
 // Cria a conexão
 $conn = new mysqli($host, $usuario, $senha, $banco);
@@ -17,9 +17,9 @@ if (isset($_GET['pesquisa'])) {
     // Filtra e sanitiza o termo de busca
     $termo_busca = $conn->real_escape_string($_GET['pesquisa']);
 
-    // Consulta SQL para buscar artistas e seus álbuns na tabela vinil
+    // Consulta SQL para buscar artistas e seus álbuns na tabela lps
     $sql = "SELECT Artista, GROUP_CONCAT(Disco SEPARATOR ',') AS discos 
-            FROM vinil 
+            FROM lps 
             WHERE Artista LIKE '%$termo_busca%' 
             GROUP BY Artista";
 

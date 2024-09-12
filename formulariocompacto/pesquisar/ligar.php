@@ -2,7 +2,7 @@
 $host = "localhost"; // Nome do host do banco de dados
 $usuario = "root"; // Nome de usuário do banco de dados
 $senha = ""; // Senha do banco de dados
-$banco = "discografia"; // Nome do banco de dados
+$banco = "catalogar"; // Nome do banco de dados
 
 // Cria a conexão
 $conn = new mysqli($host, $usuario, $senha, $banco);

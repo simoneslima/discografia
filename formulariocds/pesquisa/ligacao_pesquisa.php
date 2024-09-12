@@ -2,7 +2,7 @@
 $host = "localhost"; // Nome do host do banco de dados
 $usuario = "root"; // Nome de usuário do banco de dados
 $senha = ""; // Senha do banco de dados
-$banco = "discografia"; // Nome do banco de dados
+$banco = "catalogar"; // Nome do banco de dados
 
 // Cria a conexão
 $conn = new mysqli($host, $usuario, $senha, $banco);
@@ -18,7 +18,7 @@ if (isset($_GET['q'])) {
     $termo_busca = $conn->real_escape_string($_GET['q']);
 
     // Consulta SQL para buscar artistas e seus álbuns na tabela cds
-    $sql = "SELECT artista, GROUP_CONCAT(nome_disco SEPARATOR '<br>') AS discos FROM cds WHERE artista LIKE '%$termo_busca%' GROUP BY artista";
+    $sql = "SELECT Artista, GROUP_CONCAT(nome_disco SEPARATOR '<br>') AS Nome_disco FROM cds WHERE Artista LIKE '%$termo_busca%' GROUP BY Artista";
 
     // Executa a consulta
     $result = $conn->query($sql);
@@ -28,10 +28,10 @@ if (isset($_GET['q'])) {
         // Exibe os resultados
         while ($row = $result->fetch_assoc()) {
             // Exibe o nome do artista
-            echo "<strong>Artista:</strong> " . $row["artista"] . "<br>";
+            echo "<strong>Artista:</strong> " . $row["Artista"] . "<br>";
 
             // Separa os álbuns em um array
-            $albums = explode('<br>', $row["discos"]);
+            $albums = explode('<br>', $row["Nome_disco"]);
 
             // Inicializa a contagem dos álbuns
             $album_count = 1;
