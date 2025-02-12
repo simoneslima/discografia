@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo do título */
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do artista */
+.artista {
+    text-align: center;
+    font-size: 1.2em;
+    color: #b60f76;
+    margin-top: 15px;
+}
+
+/* Estilo dos álbuns */
+.albuns {
+    text-align: justify;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Estilo da linha divisória */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Estilo para mensagens de aviso */
+.mensagem {
+    text-align: center;
+    color: #888;
+}
+
+/* CSS para centralizar o contêiner do botão */
+.botao-voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px; /* opcional, caso queira centralizar também verticalmente */
+}
+
+/* CSS para o Botão de Voltar */
+.botao-voltar {
+    background-color: #50db34;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #29b935;
+
+}
+
+
+
+

@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\estilo_resultado.css">
+    <title>Busca por DVDS</title>
+</head>
+<body>
+<div class="container">
+<h1>Resultado da Busca</h1>
 <?php
 $host = "localhost"; // Nome do host do banco de dados
 $usuario = "root"; // Nome de usuário do banco de dados
@@ -43,3 +54,6 @@ if (isset($_GET['Singles'])) {
 // Fecha a conexão
 $conn->close();
 ?>
+</div>
+</body>
+</html>

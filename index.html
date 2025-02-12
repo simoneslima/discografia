@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>Opcões</title>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Catalogar e Pesquisar</title>
 </head>
+
 <body>
     <div class="container">
         <h1>CATALOGAR</h1>
+
         <div>
             <button class="btn-primary" onclick="showOptions('cds')">CDs</button>
             <div id="cdsOptions" class="options">
-                <button class="btn-options" onclick="pesquisar('cds')">Pesquisar Cds</button>
-                <button class="btn-options" onclick="cadastrar('cds')">Cadastrar Cds</button>
+                <button class="btn-options" onclick="pesquisar('cds')">Pesquisar CDs</button>
+                <button class="btn-options" onclick="cadastrar('cds')">Cadastrar CDs</button>
             </div>
         </div>
+
         <div>
             <button class="btn-primary" onclick="showOptions('dvds')">DVDs</button>
             <div id="dvdsOptions" class="options">
@@ -24,25 +27,34 @@
                 <button class="btn-options" onclick="cadastrar('dvds')">Cadastrar DVDs</button>
             </div>
         </div>
+
         <div>
             <button class="btn-primary" onclick="showOptions('lps')">LPs</button>
             <div id="lpsOptions" class="options">
                 <button class="btn-options" onclick="pesquisar('lps')">Pesquisar LPs</button>
                 <button class="btn-options" onclick="cadastrar('lps')">Cadastrar LPs</button>
             </div>
-        
-       <div>
+        </div>
+
+        <div>
             <button class="btn-primary" onclick="showOptions('compacto')">Compacto</button>
             <div id="compactoOptions" class="options">
-                <button class="btn-options" onclick="pesquisar('compacto')">Pesquisar Compacto</button>
+                <button class="btn-options" onclick="pesquisar('compacto')">Pesquisar Compactos</button>
                 <button class="btn-options" onclick="cadastrar('compacto')">Cadastrar Compactos</button>
             </div>
         </div>
-    
+
+        <div>
+            <button class="btn-primary" onclick="showOptions('bluray')">BluRay</button>
+            <div id="blurayOptions" class="options">
+                <button class="btn-options" onclick="pesquisar('bluray')">Pesquisar BluRay</button>
+                <button class="btn-options" onclick="cadastrar('bluray')">Cadastrar BluRay</button>
+            </div>
+        </div>
+
     </div>
+
     <script src="acesso.js"></script>
 </body>
+
 </html>
-
-
-

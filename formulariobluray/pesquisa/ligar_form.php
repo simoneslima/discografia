@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\estilo_resultado.css">
-    <title>Busca por DVDS</title>
+    <title>Busca bluray</title>
 </head>
 <body>
 <div class="container">
@@ -28,22 +28,22 @@ if (isset($_GET['pesquisa'])) {
     // Filtra e sanitiza o termo de busca
     $termo_busca = $conn->real_escape_string($_GET['pesquisa']);
 
-    // Consulta SQL para buscar títulos na tabela dvds
-    $sql = "SELECT Titulo FROM dvds WHERE Titulo LIKE '%$termo_busca%'";
+    // Consulta SQL para buscar títulos na tabela bluray
+    $sql = "SELECT Titulo FROM bluray WHERE Titulo LIKE '%$termo_busca%'";
 
     // Executa a consulta
     $result = $conn->query($sql);
 
     // Verifica se houve resultados
     if ($result->num_rows > 0) {
-        // Inicializa a contagem dos dvds
-        $dvds_count = 1;
+        // Inicializa a contagem dos bluray
+        $bluray_count = 1;
 
         // Exibe os resultados
         echo "<strong>Títulos:</strong><br>";
         while ($row = $result->fetch_assoc()) {
-            echo $dvds_count . ". " . $row['Titulo'] . "<br>";
-            $dvds_count++;
+            echo $bluray_count . " . " . $row['Titulo'] . "<br>";
+            $bluray_count++;
         }
         echo "<hr>"; // Adiciona uma linha divisória
     } else {
@@ -57,6 +57,3 @@ $conn->close();
 </div>
 </body>
 </html>
-
-
-
