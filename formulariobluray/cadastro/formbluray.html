@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="\estilo_resultado.css">
-    <title>Cadastro de BluRay </title>
+    <title>Cadastro de BluRay</title>
 </head>
 <body>
     <h1>Cadastro de BluRay</h1>
-    <form action="ligar.php" method="post">
+    <form action="ligar.php" method="post" autocomplete="off">
         <label for="Titulo">Título</label><br>
-        <input type="text" name="Titulo" id="Titulo" required autocomplete="off"><br><br>
+        <input type="text" name="Titulo" id="Titulo" required><br><br>
     
         <label for="TipoConteudo">Tipo de Conteúdo</label><br>
         <select name="TipoConteudo" id="TipoConteudo" required>
@@ -20,29 +20,28 @@
             <option value="SHOWSCLIPES">SHOWS/CLIPES/DOC</option>
             <option value="FILME/BIO/MUSIC">FILME/BIO/MUSIC</option>
             <option value="Minissérie">Minissérie</option>
-            
         </select><br><br>
     
         <label for="Genero">Gênero</label><br>
-        <input type="text" name="Genero" id="Genero" required><br><br>
+        <input type="text" name="Genero" id="Genero" required autocomplete="on"><br><br>
     
         <label for="Elenco">Elenco</label><br>
-        <input type="text" name="Elenco" id="Elenco" required autocomplete="off"><br><br>
+        <input type="text" name="Elenco" id="Elenco" required><br><br>
     
         <label for="Distribuidora">Distribuidora</label><br>
-        <input type="text" name="Distribuidora" id="Distribuidora" required><br><br>
+        <input type="text" name="Distribuidora" id="Distribuidora" required autocomplete="on"><br><br>
     
         <label for="Produto">Produto</label><br>
-        <input type="text" name="Produto" id="Produto" required><br><br>
+        <input type="text" name="Produto" id="Produto" required autocomplete="on"><br><br>
     
         <label for="Diretor">Diretor</label><br>
-        <input type="text" name="Diretor" id="Diretor" required autocomplete="off"><br><br>
+        <input type="text" name="Diretor" id="Diretor" required><br><br>
     
         <label for="AnoLancamento">Ano de Lançamento</label><br>
-        <input type="text" name="AnoLancamento" id="AnoLancamento" required autocomplete="off"><br><br>
+        <input type="text" name="AnoLancamento" id="AnoLancamento" required><br><br>
     
         <label for="Duracao">Duração (minutos)</label><br>
-        <input type="text" name="Duracao" id="Duracao" required autocomplete="off"><br><br>
+        <input type="text" name="Duracao" id="Duracao" required><br><br>
     
         <label for="QuantidadeMidias">Quantidade de Mídias</label><br>
         <input type="number" name="QuantidadeMidias" id="QuantidadeMidias" required><br><br>
@@ -50,6 +49,6 @@
         <input type="submit" value="ENVIAR">
     </form>
     
-<a href="\index.html" class="botao-voltar">Voltar</a> 
+    <a href="\index.html" class="botao-voltar">Voltar</a> 
 </body>
 </html>

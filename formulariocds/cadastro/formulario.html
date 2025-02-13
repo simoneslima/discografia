@@ -11,23 +11,23 @@
     <h1>Formulário de Cadastro</h1>
     <form action="ligacao.php" method="post">
         <label for="nome">Artista:</label><br>
-        <input type="text" id="Artista" name="Artista" required><br><br>
+        <input type="text" id="Artista" name="Artista" required autocomplete="on"><br><br>
         <label for="Nome_disco">Nome_disco:</label><br>
-        <input type="text" id="Nome_disco" name="Nome_disco" required><br><br>
+        <input type="text" id="Nome_disco" name="Nome_disco" required autocomplete="off"><br><br>
         <label for="Quant">Quant:</label><br>
         <input type="number" id="Quant" name="Quant" required placeholder="Quantidade de Copias"><br><br>
         <label for="Faixas">Faixas:</label><br>
-        <input type="text" id="Faixas" name="Faixas" required placeholder="Quantidade de Faixas"><br><br>
+        <input type="text" id="Faixas" name="Faixas" required autocomplete="off" placeholder="Quantidade de Faixas"><br><br>
         <label for="Tipo">Tipo:</label><br>
-        <input type="text" id="Tipo" name="Tipo" required placeholder="Album/Live/Coletânea"><br><br>
+        <input type="text" id="Tipo" name="Tipo" required autocomplete="on" placeholder="Album/Live/Coletânea"><br><br>
         <label for="Quant_Midia">Quant_Midia:</label><br>
         <input type="number" id="Quant_Midia" name="Quant_Midia" required placeholder="Quantidade de cds"><br><br>
         <label for="Ano_Lancamento">Ano_Lancamento:</label><br>
-        <input type="text" name="Ano_Lancamento" id="Ano_Lancamento" required><br><br>
+        <input type="text" name="Ano_Lancamento" id="Ano_Lancamento" required autocomplete="off"><br><br>
         <label for="Ano_Cd">Ano_Cd:</label><br>
-        <input type="text" id="Ano_Cd" name="Ano_Cd" required><br><br>
+        <input type="text" id="Ano_Cd" name="Ano_Cd" required autocomplete="off"><br><br>
         <label for="Pais">Pais:</label><br>
-        <input type="text" id="Pais" name="Pais" required placeholder="Origem do CD"><br><br>
+        <input type="text" id="Pais" name="Pais" required autocomplete="on" placeholder="Origem do CD"><br><br>
         <input type="submit" value="Enviar">
     </form>
     <a href="\index.html" class="botao-voltar">Voltar</a>
