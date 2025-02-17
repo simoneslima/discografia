@@ -1,54 +1,45 @@
 function pesquisar(type) {
-    switch (type) {
-        case 'cds':
-            window.location.href = 'formulariocds/Pesquisa/form_pesquisa.html'; // Redireciona para a página de pesquisa de CDs
-            break;
-        case 'dvds':
-            window.location.href = 'formulariodvds/Pesquisa/form_pesquisa.html'; // Redireciona para a página de pesquisa de DVDs
-            break;
-        case 'lps':
-            window.location.href = 'formulariolps/Pesquisa/form_pesquisals.html'; // Redireciona para a página de pesquisa de LPs
-            break;
-        case 'compacto':
-            window.location.href = 'formulariocompacto/pesquisar/form_pesquisa.html'; // Redireciona para a página de pesquisa de Compactos
-            break;
-        case 'bluray':
-            window.location.href = 'formulariobluray/pesquisa/formbluray.html'; // Redireciona para a página de pesquisa de BluRays
-            break;
+    const urls = {
+        cds: 'formulariocds/Pesquisa/form_pesquisa.html',
+        dvds: 'formulariodvds/Pesquisa/form_pesquisa.html',
+        lps: 'formulariolps/Pesquisa/form_pesquisals.html',
+        compacto: 'formulariocompacto/pesquisar/form_pesquisa.html',
+        bluray: 'formulariobluray/pesquisa/formbluray.html'
+    };
 
-        default:
-            alert('Opção inválida');
+    if (urls[type]) {
+        window.location.href = urls[type];
+    } else {
+        alert('Opção inválida');
     }
 }
 
 function cadastrar(type) {
-    switch (type) {
-        case 'cds':
-            window.location.href = 'formulariocds/cadastro/formulario.html'; // Redireciona para a página de cadastro de CDs
-            break;
-        case 'dvds':
-            window.location.href = 'formulariodvds/cadastro/formdvds.html'; // Redireciona para a página de cadastro de DVDs
-            break;
-        case 'lps':
-            window.location.href = 'formulariolps/cadastro/form_lps.html'; // Redireciona para a página de cadastro de LPs
-            break;
-        case 'compacto':
-            window.location.href = 'formulariocompacto/cadastro/form_comp.html'; // Redireciona para a página de cadastro de Compactos
-            break;
-        case 'bluray':
-            window.location.href = 'formulariobluray/cadastro/formbluray.html'; // Redireciona para a página de cadastro de DVDs
-            break;
+    const urls = {
+        cds: 'formulariocds/cadastro/formulario.html',
+        dvds: 'formulariodvds/cadastro/formdvds.html',
+        lps: 'formulariolps/cadastro/form_lps.html',
+        compacto: 'formulariocompacto/cadastro/form_comp.html',
+        bluray: 'formulariobluray/cadastro/formbluray.html'
+    };
 
-        default:
-            alert('Opção inválida');
+    if (urls[type]) {
+        window.location.href = urls[type];
+    } else {
+        alert('Opção inválida');
     }
 }
 
 function showOptions(option) {
-    var options = document.querySelectorAll('.options');
-    options.forEach(function(opt) {
-        opt.style.display = 'none';
+    let currentMenu = document.getElementById(option + 'Options');
+
+    // Fecha todos os menus, exceto o atual
+    document.querySelectorAll('.options').forEach(menu => {
+        if (menu !== currentMenu) {
+            menu.style.display = 'none';
+        }
     });
 
-    document.getElementById(option + 'Options').style.display = 'block';
+    // Alterna o menu clicado (abre se estiver fechado, fecha se estiver aberto)
+    currentMenu.style.display = (currentMenu.style.display === 'block') ? 'none' : 'block';
 }
