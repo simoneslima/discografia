@@ -22,8 +22,8 @@
             die("Conexão falhou: " . $conn->connect_error);
         }
 
-        if (isset($_GET['q'])) {
-            $termo_busca = $conn->real_escape_string($_GET['q']);
+        if (isset($_GET['pesquisacds'])) {
+            $termo_busca = $conn->real_escape_string($_GET['pesquisacds']);
             $sql = "SELECT Artista, GROUP_CONCAT(nome_disco SEPARATOR '<br>') AS Nome_disco 
                     FROM cds WHERE Artista LIKE '%$termo_busca%' GROUP BY Artista";
             $result = $conn->query($sql);

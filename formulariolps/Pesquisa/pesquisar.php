@@ -24,9 +24,9 @@ if ($conn->connect_error) {
 }
 
 // Verifica se foi feita uma consulta
-if (isset($_GET['pesquisa'])) {
+if (isset($_GET['pesquisalp'])) {
     // Filtra e sanitiza o termo de busca
-    $termo_busca = $conn->real_escape_string($_GET['pesquisa']);
+    $termo_busca = $conn->real_escape_string($_GET['pesquisalp']);
 
     // Consulta SQL para buscar artistas e seus álbuns na tabela lps
     $sql = "SELECT Artista, GROUP_CONCAT(Disco SEPARATOR ',') AS discos 

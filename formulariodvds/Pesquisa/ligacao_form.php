@@ -24,9 +24,9 @@ if ($conn->connect_error) {
 }
 
 // Verifica se foi feita uma consulta
-if (isset($_GET['pesquisa'])) {
+if (isset($_GET['pesquisadvd'])) {
     // Filtra e sanitiza o termo de busca
-    $termo_busca = $conn->real_escape_string($_GET['pesquisa']);
+    $termo_busca = $conn->real_escape_string($_GET['pesquisadvd']);
 
     // Consulta SQL para buscar títulos na tabela dvds
     $sql = "SELECT Titulo FROM dvds WHERE Titulo LIKE '%$termo_busca%'";
@@ -55,6 +55,7 @@ if (isset($_GET['pesquisa'])) {
 $conn->close();
 ?>
 </div>
+<a href="\index.html" class="botao-voltar">Voltar</a>
 </body>
 </html>
 

@@ -55,5 +55,6 @@ if (isset($_GET['Singles'])) {
 $conn->close();
 ?>
 </div>
+<a href="\index.html" class="botao-voltar">Voltar</a>
 </body>
 </html>
